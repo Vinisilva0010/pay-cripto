@@ -1,0 +1,50 @@
+[package]
+name = "zanvexis-pay-backend"
+version = "0.1.0"
+edition = "2021"
+
+# Otimização para deixar o binário leve e rápido em Produção
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+codegen-units = 1
+
+[dependencies]
+# --- 1. O MOTOR DO SERVIDOR (Web Framework) ---
+# Axum: O framework web mais moderno e ergonômico do Rust (feito pela equipe do Tokio).
+# É usado pela Discord e AWS. Alta segurança e velocidade.
+axum = "0.7"
+
+# --- 2. O SISTEMA NERVOSO (Async Runtime) ---
+# Tokio: Permite fazer milhares de coisas ao mesmo tempo sem travar.
+# "macros" e "rt-multi-thread" ativam o poder máximo dos núcleos do seu PC.
+tokio = { version = "1.0", features = ["full"] }
+
+# --- 3. A COMUNICAÇÃO (JSON) ---
+# Serde: Transforma dados complexos do Rust em JSON para o Frontend entender (e vice-versa).
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# --- 4. A VISÃO RAIO-X (Blockchain) ---
+# Alloy: A nova geração de interação com Ethereum (substituta da ethers-rs).
+# Feita pela Paradigm (maior fundo crypto do mundo). É mais rápida e segura.
+alloy = { version = "0.1", features = ["full"] }
+
+# --- 5. UTILITÁRIOS DE SEGURANÇA ---
+# Dotenvy: Para carregar senhas de um arquivo .env (nunca hardcoded no código).
+dotenvy = "0.15"
+
+# Tracing: Logs profissionais (melhor que printar na tela).
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Tower HTTP: Middleware de segurança (CORS, Timeout, Trace).
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+url = "2.5.7"
+uuid = { version = "1.19.0", features = ["v4", "fast-rng"] }
+
+# --- 6. O COFRE DE DADOS (Banco de Dados SQL) ---
+# Sqlx: A ferramenta Enterprise para falar com bancos de dados.
+# Features: runtime-tokio (para ser rápido) e sqlite (o tipo do banco).
+sqlx = { version = "0.7", features = ["runtime-tokio", "tls-native-tls", "sqlite"] }

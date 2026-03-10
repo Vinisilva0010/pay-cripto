@@ -1,4 +1,4 @@
-# 🛡️ Zanvexis Pay
+#  Pay
 
 > **Non-Custodial & Self-Hosted Crypto Payment Gateway.**
 > Built with **Rust** for military-grade performance and **Next.js** for an immersive 3D experience.
@@ -10,7 +10,7 @@
 
 ---
 
-## 🌌 About the Project
+##  About the Project
 
 **Zanvexis Pay** was born from a common frustration: relying on intermediaries (Stripe, PayPal) that charge abusive fees and hold custody of your funds.
 
@@ -23,7 +23,7 @@ This project is a **Sovereign Solution**. It acts as an "intelligent watchman" f
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 *(Place your screenshots here. Save them in the /public/screenshots folder)*
 
@@ -34,30 +34,30 @@ This project is a **Sovereign Solution**. It acts as an "intelligent watchman" f
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 The project architecture separates critical responsibilities for maximum security and scalability:
 
-### 🦀 Backend (The Core)
+###  Backend (The Core)
 * **Language:** Rust (Edition 2021)
 * **Web Framework:** Axum (Ergonomic and fast)
 * **Database:** SQLite + SQLx (Compile-time checked queries)
 * **Blockchain:** Alloy (Interaction with EVM RPCs)
 * **Architecture:** Modular (Handlers, Models, Database Layer)
 
-### ⚛️ Frontend (The Experience)
+###  Frontend (The Experience)
 * **Framework:** Next.js 16 (App Router)
 * **Styling:** Tailwind CSS v4 + Framer Motion
 * **3D Engine:** React Three Fiber (Three.js) for the "Living Core"
 * **UI/UX:** High-end Glassmorphism, noise textures, and editorial typography.
 
-### 🐳 Infrastructure
+###  Infrastructure
 * **Docker:** Full containerization (Multi-stage builds for Rust).
 * **Docker Compose:** Service orchestration.
 
 ---
 
-## ⚡ Features
+## Features
 
 - [x] **Multi-Currency Support:** Visual support for ETH, USDT, and BTC.
 - [x] **Immersive Checkout:** The "3D Core" pulses while pending and explodes in green upon confirmation.
@@ -128,7 +128,7 @@ JSON
   "qr_code_data": "ethereum:0x...?value=0.05",
   "status": "pending"
 }
-🔮 Roadmap
+ Roadmap
 [ ] Official Webhook support (Notify your store upon payment).
 
 [ ] Solana and Polygon integration (Lower gas fees).
@@ -137,7 +137,7 @@ JSON
 
 [ ] Auto-swap for incoming tokens.
 
-🤝 Contribution
+ Contribution
 Contributions are welcome! Feel free to open Issues or submit Pull Requests.
 
 Fork the project
